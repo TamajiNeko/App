@@ -17,7 +17,8 @@ function checkProximity(position) {
     const distance = getDistance(userLat, userLng, targetLat, targetLng);
     
     if (distance <= radius) {
-        document.getElementById("location").innerHTML = "User is inside the target area!(Neko with 2km)";
+        document.getElementById("location").innerHTML = 
+        "Current Position: "+userLat+", "+userLng+" "+'<a href="https://www.google.co.th/maps/@'+userLat+","+userLng+'" target="_blank">(Click to view on Google Maps)</a>'+"<br>User is inside the target area!(Neko with 2km)";
     } else {
         document.getElementById("location").innerHTML = "User is outside the target area.";
     }
