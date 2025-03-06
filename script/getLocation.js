@@ -1,6 +1,6 @@
 const targetLat = 16.820014;
 const targetLng = 100.240332;
-const radius = 1000; // Set range in meters
+const radius = 2000; // Set range in meters
 
 function getLocation() {
     if (navigator.geolocation) {
