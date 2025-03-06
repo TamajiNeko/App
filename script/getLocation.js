@@ -16,11 +16,12 @@ function checkProximity(position) {
 
     const distance = getDistance(userLat, userLng, targetLat, targetLng);
     
+    document.getElementById("info").innerHTML = "Current Position: "+userLat+", "+userLng+" "+'<a href="https://www.google.co.th/maps/@'+userLat+","+userLng+","+"15z"+'" target="_blank">(Click to view on Google Maps)</a>'
+
     if (distance <= radius) {
-        document.getElementById("location").innerHTML = 
-        "Current Position: "+userLat+", "+userLng+" "+'<a href="https://www.google.co.th/maps/@'+userLat+","+userLng+","+"15z"+'" target="_blank">(Click to view on Google Maps)</a>'+"<br>User is inside the target area!(Neko with 2km)";
+        document.getElementById("location").innerHTML = "Status: User is inside the target area!(Neko with 2km)";
     } else {
-        document.getElementById("location").innerHTML = "User is outside the target area.";
+        document.getElementById("location").innerHTML = "Status: User is outside the target area.";
     }
 }
 
