@@ -1,6 +1,6 @@
 const targetLat = 16.820014;
 const targetLng = 100.240332;
-const radius = 1000; // Set range in meters (100m)
+const radius = 1000; // Set range in meters
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -17,7 +17,7 @@ function checkProximity(position) {
     const distance = getDistance(userLat, userLng, targetLat, targetLng);
     
     if (distance <= radius) {
-        document.getElementById("location").innerHTML = "User is inside the target area!";
+        document.getElementById("location").innerHTML = "User is inside the target area!(Neko with 2km)";
     } else {
         document.getElementById("location").innerHTML = "User is outside the target area.";
     }
