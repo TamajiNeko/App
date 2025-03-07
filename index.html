@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEKO APP</title>
     <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p>This Page is just test page that check user who stay near Neko(16.820014, 100.240332) with 2km</p>
-    <button onclick="getLocation()">Check my location</button>
-    <p id="info"></p>
-    <p id="location"></p>
+    <div class="container">
+        <h1>YOUR LOCATION</h1>
+        <div>
+            <p id="info">Loading...</p>
+            <p id="location"></p>
+        </div>
+    </div>
 
     <script src="script/getLocation.js"></script>
 

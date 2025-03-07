@@ -33,14 +33,14 @@ function checkProximity(position) {
     const userLat = position.coords.latitude;
     const userLng = position.coords.longitude;
 
-    document.getElementById("info").innerHTML = "Current Position: " + userLat + ", " + userLng + 
+    document.getElementById("info").innerHTML = "Current Position: " + userLat.toFixed(7) + ", " + userLng.toFixed(7) + 
         ' <a href="https://www.google.com/maps?q=' + userLat + "," + userLng + '" target="_blank">(Click to view on Google Maps)</a>';
 
     let foundProximity = false;
     targetLocations.forEach(location => {
         const distance = getDistance(userLat, userLng, location.lat, location.lng);
         if (distance <= radius) {
-            document.getElementById("location").innerHTML = "Status: In area (" + location.placeName + ") - ~"+distance.toFixed(2)+"m";
+            document.getElementById("location").innerHTML = "Status: In area " + distance.toFixed(2)+"m (" + location.placeName + ")";
             foundProximity = true;
         }
     });
@@ -66,3 +66,5 @@ function getDistance(lat1, lon1, lat2, lon2) {
 function showError(error) {
     console.error("Geolocation error:", error);
 }
+
+getLocation()
