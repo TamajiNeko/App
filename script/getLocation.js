@@ -1,5 +1,5 @@
 // Target area settings
-const radius = 500; // 2 kilometers in meters
+const radius = 50;
 let targetLocations = [];
 
 // Fetch and process the Excel file when the page is loaded
