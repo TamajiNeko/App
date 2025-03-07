@@ -39,14 +39,14 @@ body {
 @media screen and (max-width: 768px) {
 
     .container {
-        top: -10vh;
+        top: -20vh;
     }
 
     .container p ,.container a{
-        font-size: 12px;
+        font-size: 9px;
     }
 
     .container h1 {
-        font-size: 48px;
+        font-size: 32px;
     }
 }
