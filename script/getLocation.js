@@ -48,7 +48,7 @@ function checkProximity(position) {
         const distance = getDistance(userLat, userLng, location.lat, location.lng);
         if (distance <= radius) {
             // If user is within the radius of a location, show the place name
-            document.getElementById("location").innerHTML = "Status: User is inside the target area! (" + location.placeName + ")";
+            document.getElementById("location").innerHTML = "Status: User is inside the area (" + location.placeName + ") - ("+distance+")";
             foundProximity = true;
         }
     });
