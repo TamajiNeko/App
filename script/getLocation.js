@@ -1,4 +1,4 @@
-const radius = 20;
+const radius = 30;
 let targetLocations = [];
 
 document.addEventListener("DOMContentLoaded", function () {
